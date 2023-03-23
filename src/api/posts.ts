@@ -28,9 +28,9 @@ export function getPostsPaginated(page: number) {
     });
 }
 
-export function getPost(id: string) {
+export function getPost(id: number) {
   return axios
-    .get<Post[]>(`http://localhost:3000/posts/${id}`)
+    .get<Post>(`http://localhost:3000/posts/${id}`)
     .then((res) => res.data);
 }
 
